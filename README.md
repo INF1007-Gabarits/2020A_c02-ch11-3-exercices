@@ -9,20 +9,20 @@ Nous allons étendre le jeu que nous avons fait au chapitre 11.1 en ajoutant une
 ## Sort magique
 ### `magician.Spell`
 
-On veut une classe qui représente un sort magique. Un sort est utilisable comme une arme, et a donc les même propriétés que ceux-ci (donc un nom, un niveau de puissance et un niveau minimal) en plus d'un coût d'utilisation en MP (points de magie). 
+On veut une classe qui représente un sort magique. Un sort est utilisable comme une arme, et a donc les même propriétés que celle-ci (donc un nom, un niveau de puissance et un niveau minimal) en plus d'un coût d'utilisation en *MP* (points d'énergie magique). 
 
 ## Magiciens
 ### `magician.Magician`
 
-Dans notre jeu, un magicien est un personnage qui peut utiliser de la magie. Un magicien peut faire tout ce qu'un personnage régulier (`Character`) peut faire, comme utiliser une arme physique, en plus d'avoir d'utiliser un sort de combat qui consomme des points d'énergie magique (des *MP*).
+Dans notre jeu, un magicien est un personnage qui peut utiliser de la magie. Un magicien peut faire tout ce qu'un personnage régulier (`Character`) peut faire, comme utiliser une arme physique, en plus d'utiliser un sort de combat qui consomme des points d'énergie magique (des *MP*).
 
 Un magicien a les attributs suivants, en plus de ceux de `Character` :
 
-`Magician.max_mp` : MP maximum.
-`Magician.magic_attack` : Le niveau d'attaque magique du personnage.
-`Magician.using_magic` : Détermine si le magicien tente d'utiliser sa magie dans un combat.
-`Magician.mp` : Les MP restants.
-`Magician.spell` : Le sort utilisé par le magicien.
+`Magician.max_mp` : MP maximum. <br>
+`Magician.magic_attack` : Le niveau d'attaque magique du personnage. <br>
+`Magician.using_magic` : Détermine si le magicien tente d'utiliser sa magie dans un combat. <br>
+`Magician.mp` : Les MP restants. <br>
+`Magician.spell` : Le sort utilisé par le magicien. <br>
 
 On a aussi la méthode `compute_damage()` qui calcule les dégâts infligés à un autre personnage (en paramètre). Si le personnage utilise son arme physique, la formule est exactement la même que pour les personnages réguliers :
 
