@@ -10,13 +10,17 @@ from game import *
 
 
 def main():
-	c1 = Character("Äpik", 200, 150, 70, 70)
-	c2 = Character("Gämmor", 250, 100, 120, 60)
+	c1 = Character("Äpik", 400, 150, 70, 70)
+	c2 = Character("Gämmör", 550, 100, 120, 60)
+	c3 = Magician("Damn! That magic dude", 400, 100, 50, 150, 50, 65)
 
 	c1.weapon = Weapon("BFG", 100, 69)
 	c2.weapon = Weapon("Deku Stick", 120, 1)
+	c3.spell = Spell("Big Chungus Power", 100, 30, 50)
+	c3.weapon = Weapon("Slingshot", 80, 20)
+	c3.using_magic = True
 
-	turns = run_battle(c1, c2)
+	turns = run_battle(c3, c2)
 	print(f"The battle ended in {turns} turns.")
 
 if __name__ == "__main__":

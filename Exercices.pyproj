@@ -22,14 +22,23 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="character.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="game.py" />
     <Compile Include="exercice.py" />
+    <Compile Include="magician.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_exercice.py" />
     <Compile Include="utils.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="_exercice_version_prof.py" />
     <Compile Include="_game_version_prof.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_magician_version_prof.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

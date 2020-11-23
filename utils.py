@@ -1,5 +1,5 @@
 """
-Chapitre 11.1
+Chapitre 11.3
 
 Fonctions utilitaires.
 """

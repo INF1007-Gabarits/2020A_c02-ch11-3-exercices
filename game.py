@@ -1,54 +1,37 @@
 """
-Chapitre 11.1
+Chapitre 11.3
 
-Classes pour représenter un personnage.
+Classes pour représenter des personnages.
 """
 
 
 import random
 
 import utils
-
-
-class Weapon:
-	"""
-	Une arme dans le jeu.
-
-	:param name: Le nom de l'arme
-	:param power: Le niveau d'attaque
-	:param min_level: Le niveau minimal pour l'utiliser
-	"""
-
-	UNARMED_POWER = 20
-
-
-class Character:
-	"""
-	Un personnage dans le jeu
-
-	:param name: Le nom du personnage
-	:param max_hp: HP maximum
-	:param attack: Le niveau d'attaque du personnage
-	:param defense: Le niveau de défense du personnage
-	:param level: Le niveau d'expérience du personnage
-	"""
-
+from character import *
+from magician import *
 
 
 def deal_damage(attacker, defender):
-	# TODO: Calculer dégâts
-	print(f"{attacker.name} used {attacker.weapon.name}")
+	weapon_used = attacker.spell if isinstance(attacker, Magician) and attacker.will_use_spell() else attacker.weapon
+	damage, crit = attacker.compute_damage(defender)
+	defender.hp -= damage
+	print(f"  {attacker.name} used {weapon_used.name}")
 	if crit:
-		print("  Critical hit!")
-	print(f"  {defender.name} took {damage} dmg")
+		print("    Critical hit!")
+	print(f"    {defender.name} took {damage} dmg")
 
 def run_battle(c1, c2):
-	# TODO: Initialiser attaquant/défendeur, tour, etc.
-	print(f"{attacker.name} starts a battle with {defender.name}!")
+	attacker = c1
+	defender = c2
+	turns = 1
+	print(f"{attacker.name} would like to battle.")
+	print(f"{defender.name} accepted!")
 	while True:
-		# TODO: Appliquer l'attaque
-		# TODO: Si le défendeur est mort
-			print(f"{defender.name } is sleeping with the fishes.")
+		deal_damage(attacker, defender)
+		if defender.hp == 0:
+			print(f"  {defender.name } is sleeping with the fishes.")
 			break
-		# Échanger attaquant/défendeur
-	# TODO: Retourner nombre de tours effectués
+		turns += 1
+		attacker, defender = defender, attacker
+	return turns
