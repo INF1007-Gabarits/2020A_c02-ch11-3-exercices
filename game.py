@@ -1,7 +1,7 @@
 """
 Chapitre 11.3
 
-Classes pour représenter des personnages.
+Fonctions pour simuler un combat.
 """
 
 

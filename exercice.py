@@ -1,5 +1,5 @@
 """
-Chapitre 11.1
+Chapitre 11.3
 """
 
 
@@ -16,7 +16,7 @@ def simulate_battle():
 
 	c1.weapon = Weapon("BFG", 100, 69)
 	c2.weapon = Weapon("Deku Stick", 120, 1)
-	c3.spell = Spell("Big Chungus Power", 100, 30, 50)
+	c3.spell = Spell("Big Chungus Power", 100, 35, 50)
 	c3.weapon = Weapon("Slingshot", 80, 20)
 	c3.using_magic = True
 
